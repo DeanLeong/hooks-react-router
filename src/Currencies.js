@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import currencies from "./currencies.json";
 
 export default function Currencies() {
@@ -6,7 +8,7 @@ export default function Currencies() {
     <div>
       {currencies.map((currency) => (
         <h2>
-          <a href={`/price/${currency.currency}`}>{currency.currency}</a>: 
+          <Link to={`/price/${currency.currency}`}>{currency.currency}</Link>:
           {currency.country}
         </h2>
       ))}
